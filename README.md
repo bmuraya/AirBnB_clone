@@ -1,25 +1,14 @@
 # AirBnB Clone 
 
-### Contents
-
-- [Description](#Description)
-- [Environment](#Environment)
-- [Further Information](#Furtherinformation)
-- [Requirements](#Requirements)
-- [Repo Contents](#FileContents)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Built with](#Built-with)
-- [Acknowledgements](#Acknowledgements)
-
 ## Description :page_facing_up:
-This is the first phase of a four phase project, to create a basic clone of the AirBnB web app. In this first phase a basic console was created using the Cmd Python module, to manage the objects of the whole project, being able to implement the methods creSate, show, update, all, and destroy to the existing classes and subclasses.
-
+Creating a basic clone of the AirBnB web app.
+In this first phase a basic console was created using the 
+  Cmd Python module, to manage the objects of the whole project
 
 ## Environment :computer:
 The console was developed in Ubuntu 14.04LTS using python3 (version 3.4.3).
 
-### Further information :bookmark_tabs:
+### Further information
 For further information on python version, and documentation visit [python.org](https://www.python.org/).
 
 ## Requirements :memo:
