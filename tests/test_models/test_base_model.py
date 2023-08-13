@@ -22,7 +22,7 @@ class Test_init(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_instance_creation_no_arg(self):
@@ -142,7 +142,7 @@ class Test_str__(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_print(self):
@@ -180,7 +180,6 @@ class Test_str__(unittest.TestCase):
             self.assertEqual(st, s)
 
     def test_print_kwargs(self):
-
         """ Test __str__ with prev set kwargs """
         d = {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337',
              'created_at': '2017-09-28T21:03:54.053212',
@@ -203,7 +202,7 @@ class Test_save(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_save(self):
@@ -234,7 +233,7 @@ class Test_to_dict(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_to_dict(self):

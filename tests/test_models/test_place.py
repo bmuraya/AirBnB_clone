@@ -20,7 +20,7 @@ class Test_instancePlace(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_instance(self):
@@ -48,7 +48,7 @@ class Test_class_attrsPlace(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_correct_classattr(self):
@@ -63,11 +63,11 @@ class Test_class_attrsPlace(unittest.TestCase):
         for i, j in zip(attr, value):
             self.assertFalse(i in d)
             self.assertTrue(hasattr(b, i))
-            if (type(j) is int):
+            if (isinstance(j, int)):
                 self.assertEqual(getattr(b.__class__, i, False), 0)
-            elif (type(j) is float):
+            elif (isinstance(j, float)):
                 self.assertEqual(getattr(b.__class__, i, False), 0.0)
-            elif (type(j) is list):
+            elif (isinstance(j, list)):
                 self.assertEqual(getattr(b.__class__, i, False), [])
             else:
                 self.assertEqual(getattr(b.__class__, i, False), "")
@@ -86,11 +86,11 @@ class Test_class_attrsPlace(unittest.TestCase):
         for i, j, in zip(attr, value):
             self.assertEqual(getattr(b, i, False), j)
         for i, j in zip(attr, value):
-            if (type(j) is int):
+            if (isinstance(j, int)):
                 self.assertEqual(getattr(b.__class__, i, False), 0)
-            elif (type(j) is float):
+            elif (isinstance(j, float)):
                 self.assertEqual(getattr(b.__class__, i, False), 0.0)
-            elif (type(j) is list):
+            elif (isinstance(j, list)):
                 self.assertEqual(getattr(b.__class__, i, False), [])
             else:
                 self.assertEqual(getattr(b.__class__, i, False), "")
@@ -107,7 +107,7 @@ class Test_initPlace(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_instance_creation_no_arg(self):
@@ -227,7 +227,7 @@ class Test_str__Place(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_print(self):
@@ -265,7 +265,6 @@ class Test_str__Place(unittest.TestCase):
             self.assertEqual(st, s)
 
     def test_print_kwargs(self):
-
         """ Test __str__ with prev set kwargs """
         d = {'id': '56d43177-cc5f-4d6c-a0c1-e167f8c27337',
              'created_at': '2017-09-28T21:03:54.053212',
@@ -312,7 +311,7 @@ class Test_to_dictPlace(unittest.TestCase):
         """ Tear down for all methods """
         try:
             remove("file.json")
-        except:
+        except BaseException:
             pass
 
     def test_to_dict(self):
