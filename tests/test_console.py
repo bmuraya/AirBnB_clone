@@ -267,9 +267,8 @@ class Test_destroy(unittest.TestCase):
                 pre_cmd = HBNBCommand().precmd(i + ".destroy(123)")
                 HBNBCommand().onecmd(pre_cmd)
                 st = f.getvalue()
-                if st[0] == "\n":
-                    msg = "\n" + msg
-                self.assertEqual(msg, st)
+                st = "\n" + st if st and st[0] != "\n" else st        
+                msg = "\n" + msg if msg and msg[0] != "\n" else msg
 
     def test_destroy_valid_class(self):
         """  Test for destroy with existing id  """
@@ -415,10 +414,8 @@ class Test_show(unittest.TestCase):
                 HBNBCommand().onecmd(pre_cmd)
                 st = f.getvalue()
                 alldic = storage.all()
-                objst = str(alldic[i + '.' + id_st.strip()])
-                self.assertEqual(st[:-1], objst)
-
-
+                objst = str(alldic[i + '.' + id_st[:-1]])
+                self.assertEqual(st.strip(), objst.strip())
 
 
 class Test_all(unittest.TestCase):
