@@ -488,8 +488,8 @@ class Test_all(unittest.TestCase):
                 pre_cmd = HBNBCommand().precmd(i + ".all()")
                 HBNBCommand().onecmd(pre_cmd)
                 st = f.getvalue()
-                if st[0] == "\n":
-                    msg = "\n" + msg
+                st = "\n" + st if st and st[0] != "\n" else st
+                msg = "\n" + msg if msg and msg[0] != "\n" else msg
                 self.assertEqual(msg, st)
 
     def test_all_classes(self):
