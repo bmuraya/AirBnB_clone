@@ -244,27 +244,6 @@ class HBNBCommand(cmd.Cmd):
                 if cmd_argv[0] == check[0]:
                     count += 1
         print(count)
-        def do_help(self, arg):
-        """available commands with their explanations"""
-        cmd.Cmd.do_help(self, arg)  # Call default help function
-
-        # custom help information here
-        if arg == "quit":
-            print("Quit command to exit the program")
-        elif arg == "EOF":
-            print("EOF command to exit the program")
-        elif arg == "create":
-            print("Create an instance of a specified model")
-        elif arg == "show":
-            print("Display details of a specified instance by ID")
-        elif arg == "all":
-            print("List all instances or instances of a specified class")
-        elif arg == "destroy":
-            print("Delete an instance based on its ID")
-        elif arg == "update":
-            print("Update attributes of a specified instance")
-        elif arg == "count":
-            print("Count instances of a specified class")
 
 
 if __name__ == '__main__':
