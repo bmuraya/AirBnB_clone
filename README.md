@@ -6,7 +6,7 @@ In this first phase a basic console was created using the
   Cmd Python module, to manage the objects of the whole project
 
 ## Environment :computer:
-The console was developed in Ubuntu 14.04LTS using python3 (version 3.4.3).
+The console was developed in Ubuntu 20.04LTS using python3 (version 3.4.3).
 
 ### Further information
 For further information on python version, and documentation visit [python.org](https://www.python.org/).
