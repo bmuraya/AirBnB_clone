@@ -285,7 +285,3 @@ HBnB - version 9.6
 
 ### Acknowledgements :raised_hands:
 To all the peers that contribuited with their knowledge
-
-### Authors :fountain_pen:
-* Faith Warima N- @warimap
-* David Macharia W - @davidMacharia62
